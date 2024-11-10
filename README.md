@@ -1,9 +1,9 @@
 # php-color-crescendo
 2-3 gün içerisinde aceleyle yazılmıştır bundan dolayı kod kalitesi yüksek değil. isteyen tekrarlamaları tek bir dosyadan referans yaparak, fonsiyona indirgeyerek çözebilir. Anısı çoktur😃
 
-not: içerisindeki credentialları denemenize gerek yok😃 herşey bitti😌
+https://github.com/Scorpions-Robotics/color-crescendo-team-database
 
-# Emeği geçenler😍
+# Emeği geçenler
 https://github.com/egeakman
 
 
