@@ -1,0 +1,688 @@
+@import url('font.css');
+
+* {
+    font-family: 'MyriadPro';
+}
+
+html {
+    /*    background: url("../image/bg.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;*/
+}
+
+BODY {
+    background: #075BA0;
+    -webkit-font-smoothing: antialiased;
+    height: 100%;
+}
+
+canvas {
+    height: 100vh;
+    z-index: -10;
+    position: fixed;
+    top: 0;
+}
+
+#menuButton {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: none;
+    color: White;
+    z-index: 9999;
+    font-size: 32px;
+}
+
+#header, .duyurular, .ikonlar {
+    width: 100%;
+    float: left;
+}
+
+#header {
+    /*background-color: #064E89;*/
+    padding: 10px 0 20px;
+}
+
+.icon-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+    .icon-list li {
+        float: left;
+        display: inline-block;
+        font-size: 16px;
+        line-height: 70px;
+        cursor: pointer;
+        margin: 43px;
+        width: 133px;
+        height: 132px;
+        text-align: center;
+        position: relative;
+        text-decoration: none;
+        z-index: 1;
+        color: #064E89;
+    }
+
+        .icon-list li:after {
+            pointer-events: none;
+            position: absolute;
+            width: 151px;
+            height: 151px;
+            border-radius: 50%;
+            content: '';
+            -webkit-box-sizing: content-box;
+            -moz-box-sizing: content-box;
+            box-sizing: content-box;
+            -webkit-animation: spinOut 2s;
+            -moz-animation: spinOut 2s;
+            animation: spinOut 2s;
+            top: -9px;
+            left: -9px;
+            padding: 0;
+            z-index: 10;
+            background-image: url("../image/icon-dis.html");
+            background-repeat: no-repeat;
+            opacity: 0.2;
+        }
+
+        .icon-list li:before {
+            speak: none;
+            font-size: 48px;
+            line-height: 132px;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            display: block;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .icon-list li:hover {
+            color: #45d286;
+            transition: color 0.5s linear;
+        }
+
+            .icon-list li:hover:after {
+                background-image: url("../image/icon-dis-hover.html");
+                opacity: 1;
+                -webkit-transition: opacity 1s, -webkit-transform 0.2s;
+                -moz-transition: opacity 1s, -moz-transform 0.2s;
+                transition: opacity 1s, transform 0.2s;
+                -webkit-animation: spinAround 9s linear infinite;
+                -moz-animation: spinAround 9s linear infinite;
+                animation: spinAround 9s linear infinite;
+            }
+
+@-webkit-keyframes spinAround {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes spinAround {
+    from {
+        -moz-transform: rotate(0deg);
+    }
+
+    to {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@keyframes spinAround {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spinOut {
+    from {
+        -webkit-transform: rotate(360deg);
+    }
+
+    to {
+        -webkit-transform: rotate(0deg);
+    }
+}
+
+@-moz-keyframes spinOut {
+    from {
+        -moz-transform: rotate(360deg);
+    }
+
+    to {
+        -moz-transform: rotate(0deg);
+    }
+}
+
+@keyframes spinOut {
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+#header .logo {
+    text-decoration: none;
+    color: white;
+    margin-top: 9px;
+    width: 232px;
+}
+
+    #header .logo img {
+        float: left;
+    }
+
+    #header .logo span {
+        float: left;
+        margin-left: 16px;
+    }
+
+    #header .logo .s1 {
+        font-size: 1.5em;
+        margin-top: 13px;
+    }
+
+    #header .logo .s2 {
+        font-size: 1em;
+    }
+
+.profile {
+    margin-top: 11px;
+    float: right;
+    line-height: 16px;
+}
+
+    .profile span {
+        color: white;
+        font-size: 14px;
+        float: left;
+    }
+
+.profile-img {
+    margin-left: 29px;
+    border-radius: 10px;
+    width: 65px;
+    height: 75px;
+}
+
+
+.profil > button {
+            color: white;
+        }
+
+        .profil > button:hover {
+            color: white;
+            text-decoration: none
+        }
+
+        .dropdown.profil.profil > button {
+            color: white;
+            text-decoration: none
+        }
+
+        .valer {
+            border: 1px solid rgba(255, 0, 0, .1);
+            box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, .25);
+        }
+
+.duyurular {
+    margin: 10px 0;
+}
+
+    .duyurular .carousel-inner {
+        border-bottom: 1px solid rgba(255, 255, 255, .2);
+		height: 50px;
+    }
+
+    .duyurular a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .duyurular .carousel-item {
+    }
+
+    .duyurular .carousel-control-next, .duyurular .carousel-control-prev {
+        width: initial;
+    }
+
+#team {
+    /*background: #eee !important;*/
+    float: left;
+    width: 100%;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #108d6f;
+    border-color: #108d6f;
+    box-shadow: none;
+    outline: none;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #007b5e;
+    border-color: #007b5e;
+}
+
+section {
+    padding: 60px 0;
+}
+
+    section .section-title {
+        text-align: center;
+        color: #007b5e;
+        margin-bottom: 50px;
+        text-transform: uppercase;
+    }
+
+#team .card {
+    border: none;
+    background: none;
+}
+
+.image-flip:hover .backside,
+.image-flip.hover .backside {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    border-radius: .25rem;
+}
+
+.not-flip:hover .backside,
+.not-flip.hover .backside {
+    display: none;
+}
+
+.image-flip:hover .frontside,
+.image-flip.hover .frontside {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.not-flip:hover .frontside,
+.not-flip.hover .frontside {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+
+.mainflip {
+    -webkit-transition: 1s;
+    -webkit-transform-style: preserve-3d;
+    -ms-transition: 1s;
+    -moz-transition: 1s;
+    -moz-transform: perspective(1000px);
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transition: 1s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.frontside {
+    position: relative;
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    z-index: 2;
+    margin-bottom: 30px;
+}
+
+.backside {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+}
+
+.frontside,
+.backside {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transition: 1s;
+    -moz-transform-style: preserve-3d;
+    -o-transition: 1s;
+    -o-transform-style: preserve-3d;
+    -ms-transition: 1s;
+    -ms-transform-style: preserve-3d;
+    transition: 1s;
+    transform-style: preserve-3d;
+}
+
+    .frontside .card,
+    .backside .card {
+        min-height: 215px;
+        border-radius: .5rem;
+    }
+
+        .backside .card a {
+            font-size: 18px;
+            color: #007b5e !important;
+        }
+
+        .frontside .card .card-title a,
+        .backside .card .card-title {
+            color: #404c58 !important;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .frontside .card .card-title a {
+            font-size: 1.2rem;
+            color: white !important;
+        }
+
+        .frontside .card .card-body img {
+            width: 150px;
+            border-radius: 50%;
+            background-color: white;
+            box-shadow: 0 0 35px #000;
+            border: 15px solid white;
+        }
+
+.card-body ul {
+    margin: 0;
+    width: 100%;
+}
+
+#ProfileInfoButton {
+    display: none;
+}
+
+footer {
+    float: left;
+    width: 100%;
+    background-color: #064E89;
+    color: White;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+/*Login*/
+
+.form-body {
+    background: none;
+}
+
+.form-content {
+    background: none;
+}
+
+.page-links p {
+    text-align: center;
+    color: white;
+    font-size: 26px;
+}
+
+.SifremiUnuttum {
+    color: white;
+    width: 100%;
+    border-top: 1px dotted rgba(255, 255, 255, .2);
+    display: block;
+    padding: 1px 0;
+    font-size: 14px;
+    text-align: right;
+    float: left;
+    margin-top: 12px;
+    text-decoration: none;
+}
+
+    .SifremiUnuttum:hover {
+        color: white;
+        text-decoration: none;
+    }
+
+.form-content .form-button .ibtn:hover {
+    background: #099A9D;
+    color: white;
+}
+
+
+.LeftImage {
+    position: relative;
+    width: 100%;
+}
+
+    .LeftImage a {
+        width: 43px;
+        height: 43px;
+        display: block;
+        cursor: pointer;
+        position: absolute;
+    }
+
+    .LeftImage .btn1 {
+        top: 91px;
+        left: 116px;
+    }
+
+    .LeftImage .btn2 {
+        top: 217px;
+        left: 222px;
+    }
+
+    .LeftImage .btn3 {
+        top: 77px;
+        left: 291px;
+    }
+
+.badge-kirmizi {
+    position: absolute;
+    font-size: 20px;
+    margin-left: 106px;
+    color: white;
+    background-color: #ff2b2b;
+    font-weight: 300;
+    padding: .3em 0.5em;
+    border-radius: 100%;
+}
+
+
+.info-holder .mobile-apps {
+    position: relative;
+    left: 97px;
+    top: 32px;
+    width: 225px;
+}
+
+    .info-holder .mobile-apps p {
+        float: left;
+        text-align: center;
+        font-size: 14px;
+        margin: 0;
+    }
+
+    .info-holder .mobile-apps ul {
+        margin: 0;
+        padding: 0;
+        float: left;
+    }
+
+        .info-holder .mobile-apps ul li {
+            float: left;
+            margin-right: 5px;
+            list-style: none;
+        }
+
+            .info-holder .mobile-apps ul li:last-child {
+                margin-right: 0;
+            }
+
+            .info-holder .mobile-apps ul li a {
+                display: block;
+                transition: all 1s;
+            }
+
+                .info-holder .mobile-apps ul li a:hover {
+                    opacity: .5;
+                }
+
+                /*.info-holder .mobile-apps ul li a img {
+                    width: 32px;
+                }*/
+
+
+
+/*Login End*/
+
+@media only screen and (max-width: 399px) {
+    #ProfileInfoDiv {
+        display: none;
+    }
+
+    #ProfileInfoButton {
+        display: block;
+        float: right;
+        position: relative;
+    }
+
+    #header .logo {
+        width: 204px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .profile span {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 467px) {
+    .profile span {
+        font-size: 12px;
+    }
+
+    .carousel {
+        min-height: 85px;
+    }
+}
+
+@media only screen and (max-width: 767px) and (min-width: 576px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 575px) and (min-width: 400px) {
+    .profile {
+        margin-right: 45px;
+        line-height: 17px;
+        float: left;
+        padding: 10px;
+        width: 100%;
+        background: rgba(13, 60, 99, 0.7);
+        margin-top: 31px;
+    }
+
+    #ProfileInfoDiv {
+        display: none;
+    }
+
+    #ProfileInfoButton {
+        display: block;
+        float: right;
+        position: relative;
+    }
+
+    .carousel {
+        min-height: 85px;
+    }
+
+    #ProfileInfoDiv .profile-img {
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width: 467px) {
+    .profile {
+        margin-right: 45px;
+        line-height: 17px;
+        float: left;
+        padding: 10px;
+        width: 100%;
+        background: rgba(13, 60, 99, 0.7);
+        margin-top: 31px;
+    }
+
+    .icon-list li {
+        margin: 43px 19px;
+    }
+
+        .icon-list li:after {
+            background: none;
+        }
+
+    #ProfileInfoDiv .profile-img {
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width: 371px) {
+    .icon-list li {
+        margin: 43px 6px;
+    }
+}
+
+
+
+@media only screen and (max-width: 991px) {
+    .image-flip:hover .frontside, .image-flip.hover .frontside {
+        -webkit-transform: rotateY(0deg);
+        -moz-transform: rotateY(0deg);
+        -o-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+    }
+
+    .backside {
+        display: none;
+    }
+
+    footer {
+        position: relative;
+    }
+
+    #team {
+        padding-top: 10px;
+    }
+
+
+    #menuButton {
+        display: block;
+    }
+}
